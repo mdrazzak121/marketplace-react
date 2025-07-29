@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import products from "./data/products";
 import ProductCard from "./components/ProductCard";
-
+import ProductCard from "./components/OrderModal";
 const App = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
