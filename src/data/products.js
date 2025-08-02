@@ -17,7 +17,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748751221/Screenshot_2024-12-21-11-48-17-06_jbkgdi.png",
   },
     {
-    id: "P002",
+    id: "P003",
     name: "Elegant Saree",
     quantity: "12 pcs",
     fabric: "Silk",
@@ -26,7 +26,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748751041/FB_IMG_1722560683737_rkzyo2.jpg",
   },
     {
-    id: "P002",
+    id: "P004",
     name: "Elegant Saree",
     quantity: "6 pcs",
     fabric: "Silk",
@@ -35,7 +35,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748750935/FB_IMG_1723649163476_pccumm.jpg",
   },
     {
-    id: "P002",
+    id: "P005",
     name: "Elegant Saree",
     quantity: "8 pcs",
     fabric: "Silk",
@@ -44,7 +44,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748102/Screenshot_2024-10-31-15-35-14-21_zzoy4i.png",
   },
     {
-    id: "P002",
+    id: "P006",
     name: "Elegant Saree",
     quantity: "15 pcs",
     fabric: "Silk",
@@ -53,7 +53,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748102/Screenshot_2024-10-31-15-35-11-37_wtuc18.png",
   },
     {
-    id: "P002",
+    id: "P007",
     name: "Elegant Saree",
     quantity: "11 pcs",
     fabric: "Silk",
@@ -62,7 +62,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748102/Screenshot_2024-10-31-15-34-49-07_bzpzhv.png",
   },
     {
-    id: "P002",
+    id: "P008",
     name: "Elegant Saree",
     quantity: "25 pcs",
     fabric: "Silk",
@@ -71,7 +71,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748103/Screenshot_2024-10-31-15-35-28-57_wiggzi.png",
   },
       {
-    id: "P002",
+    id: "P009",
     name: "Elegant Saree",
     quantity: "7 pcs",
     fabric: "Silk",
@@ -80,7 +80,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748104/Screenshot_2024-10-31-15-35-37-37_unzcpu.png",
   },
       {
-    id: "P002",
+    id: "P010",
     name: "Elegant Saree",
     quantity: "12 pcs",
     fabric: "Silk",
@@ -89,7 +89,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748106/Screenshot_2024-10-31-15-44-36-78_ewbosr.png",
   },
       {
-    id: "P002",
+    id: "P011",
     name: "Elegant Saree",
     quantity: "16 pcs",
     fabric: "Silk",
@@ -98,7 +98,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748106/Screenshot_2024-10-31-15-35-40-85_obgtra.png",
   },
       {
-    id: "P002",
+    id: "P012",
     name: "Elegant Saree",
     quantity: "50 pcs",
     fabric: "Silk",
@@ -107,7 +107,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748109/Screenshot_2024-10-31-15-33-09-05_yschmk.png",
   },
       {
-    id: "P002",
+    id: "P013",
     name: "Elegant Saree",
     quantity: "20 pcs",
     fabric: "Silk",
@@ -116,7 +116,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748124/Screenshot_2024-11-06-23-11-08-58_dycm99.png",
   },
       {
-    id: "P002",
+    id: "P014",
     name: "Elegant Saree",
     quantity: "3 pcs",
     fabric: "Silk",
@@ -125,7 +125,7 @@ const products = [
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748127/Screenshot_2024-11-06-23-11-14-12_xhmzie.png",
   },
       {
-    id: "P002",
+    id: "P015",
     name: "Buttick Three pcs",
     quantity: "4pcs",
     fabric: "Silk",
