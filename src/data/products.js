@@ -1,6 +1,6 @@
 const products = [
   {
-    id: "P001",
+    id: "P111",
     name: "Luxury Kurta",
     fabric: "Cotton",
     price: "৳1200",
