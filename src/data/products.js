@@ -6,6 +6,7 @@ const products = [
     price: "৳1200",
     description: "সুন্দর ডিজাইনের সাদা কুর্তা।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748751225/Screenshot_2024-12-21-11-48-12-07_htcsb9.png",
+    category: "male",
   },
   {
     id: "P002",
@@ -15,8 +16,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748751221/Screenshot_2024-12-21-11-48-17-06_jbkgdi.png",
+    category: "adult",
   },
-    {
+  {
     id: "P003",
     name: "Elegant Saree",
     quantity: "12 pcs",
@@ -24,8 +26,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748751041/FB_IMG_1722560683737_rkzyo2.jpg",
+    category: "female",
   },
-    {
+  {
     id: "P004",
     name: "Elegant Saree",
     quantity: "6 pcs",
@@ -33,8 +36,9 @@ const products = [
     price: "৳2500",
     description: "সুন্দর ১০০% কটন পাঞ্জাবি",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748750935/FB_IMG_1723649163476_pccumm.jpg",
+    category: "male",
   },
-    {
+  {
     id: "P005",
     name: "Elegant Saree",
     quantity: "8 pcs",
@@ -42,8 +46,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748102/Screenshot_2024-10-31-15-35-14-21_zzoy4i.png",
+    category: "emitession",
   },
-    {
+  {
     id: "P006",
     name: "Elegant Saree",
     quantity: "15 pcs",
@@ -51,8 +56,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748102/Screenshot_2024-10-31-15-35-11-37_wtuc18.png",
+    category: "female",
   },
-    {
+  {
     id: "P007",
     name: "Elegant Saree",
     quantity: "11 pcs",
@@ -60,8 +66,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748102/Screenshot_2024-10-31-15-34-49-07_bzpzhv.png",
+    category: "female",
   },
-    {
+  {
     id: "P008",
     name: "Elegant Saree",
     quantity: "25 pcs",
@@ -69,8 +76,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748103/Screenshot_2024-10-31-15-35-28-57_wiggzi.png",
+    category: "other",
   },
-      {
+  {
     id: "P009",
     name: "Elegant Saree",
     quantity: "7 pcs",
@@ -78,8 +86,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748104/Screenshot_2024-10-31-15-35-37-37_unzcpu.png",
+    category: "female",
   },
-      {
+  {
     id: "P010",
     name: "Elegant Saree",
     quantity: "12 pcs",
@@ -87,8 +96,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748106/Screenshot_2024-10-31-15-44-36-78_ewbosr.png",
+    category: "female",
   },
-      {
+  {
     id: "P011",
     name: "Elegant Saree",
     quantity: "16 pcs",
@@ -96,8 +106,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748106/Screenshot_2024-10-31-15-35-40-85_obgtra.png",
+    category: "baby",
   },
-      {
+  {
     id: "P012",
     name: "Elegant Saree",
     quantity: "50 pcs",
@@ -105,8 +116,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748109/Screenshot_2024-10-31-15-33-09-05_yschmk.png",
+    category: "female",
   },
-      {
+  {
     id: "P013",
     name: "Elegant Saree",
     quantity: "20 pcs",
@@ -114,8 +126,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748124/Screenshot_2024-11-06-23-11-08-58_dycm99.png",
+    category: "female",
   },
-      {
+  {
     id: "P014",
     name: "Elegant Saree",
     quantity: "3 pcs",
@@ -123,8 +136,9 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক সিল্ক শাড়ি।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748127/Screenshot_2024-11-06-23-11-14-12_xhmzie.png",
+    category: "female",
   },
-      {
+  {
     id: "P015",
     name: "Buttick Three pcs",
     quantity: "4pcs",
@@ -132,6 +146,7 @@ const products = [
     price: "৳2500",
     description: "মসৃণ ও আরামদায়ক বাটিক 3pcs ।",
     image: "https://res.cloudinary.com/dbdgekpfd/image/upload/v1748748084/Screenshot_2024-10-31-15-27-41-53_lgdqbc.png",
+    category: "female",
   },
 
 ];
