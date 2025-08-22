@@ -21,43 +21,41 @@ const App = () => {
     });
   };
 
-
-  const handleOrderCart = () => {
-    setShowCartModal(true);
-  };
-
-  const handleCloseCartModal = () => {
-    setShowCartModal(false);
-  };
-
-  const handleRemoveFromCart = (id) => {
+  const handleOrderCart = () => setShowCartModal(true);
+  const handleCloseCartModal = () => setShowCartModal(false);
+  const handleRemoveFromCart = (id) =>
     setCart((prev) => prev.filter((item) => item.id !== id));
-  };
-
 
   const categories = [
     { label: "All", value: "all" },
     { label: "Male Dress", value: "male" },
     { label: "Female Dress", value: "female" },
     { label: "Baby Dress", value: "baby" },
-    { label: "Adult Dress", value: "adult" },
+    { label: "Islamik Dress", value: "adult" },
     { label: "Emitession", value: "emitession" },
+    { label: "Fancy Dress", value: "fancy" },
+    { label: "Sharee", value: "sharee" },
+    { label: "Footwear", value: "footwear" },
+    { label: "Winter Dress", value: "winter" },
+    { label: "Cosmetics", value: "cosmetics" },
     { label: "Other Collection", value: "other" },
   ];
 
   return (
-    <div className="flex">
-      {/* Always show sidebar on all devices */}
+    <div className="flex m-0 p-0">
+      {/* Sidebar */}
       <aside
-        className="bg-gray-800 text-white min-h-screen p-2 z-40 w-32 fixed top-0 left-0 h-full"
-        style={{ maxWidth: 130 }}
+        className="bg-gray-800 text-white min-h-screen z-40 fixed top-0 left-0 h-full overflow-y-auto p-0"
+        style={{ maxWidth: window.innerWidth < 640 ? 45 : 130 }}
       >
-        <h2 className="text-base font-bold mb-2">Categories</h2>
-        <div className="flex flex-col gap-1 justify-center items-center">
+        <h2 className="text-sm sm:text-base font-bold text-center m-0 p-2">
+          Categories
+        </h2>
+        <div className="flex flex-col gap-0 m-0 p-0">
           {categories.map((cat) => (
             <button
               key={cat.value}
-              className={`w-full text-left px-2 py-1 rounded text-xs hover:bg-gray-700 ${
+              className={`w-full text-left text-xs sm:text-sm hover:bg-gray-700 p-1 ${
                 selectedCategory === cat.value ? "bg-gray-700" : ""
               }`}
               onClick={() => setSelectedCategory(cat.value)}
@@ -65,34 +63,33 @@ const App = () => {
               {cat.label}
             </button>
           ))}
-          <button
-            className="w-full mt-2 px-2 py-1 rounded text-xs bg-purple-600 hover:bg-purple-700 text-white font-semibold"
-            onClick={handleOrderCart}
-            disabled={cart.length === 0}
-          >
-            All Cart Items ({cart.length})
-          </button>
+         <button
+  className="w-full px-2 py-1 text-xs bg-purple-600 hover:bg-purple-700 text-white font-semibold"
+  onClick={handleOrderCart}
+  disabled={cart.length === 0}
+>
+  All Cart Items ({cart.length})
+</button>
+
         </div>
       </aside>
 
-  {/* Main Content */}
-  <div className="flex-1 p-4" style={{ minHeight: '100vh', marginLeft: 130 }}>
-        {/* Sticky Poster & Hero Section */}
-        <div className="sticky top-0 z-30 bg-white pb-2" style={{ boxShadow: '0 2px 8px #0001' }}>
-          <div className="mb-2">
-            <img
-              src="https://drive.google.com/uc?export=view&id=1QNmbbgXPi2iEQ_YHO7Q8HXLrCJ-PmiiM"
-              alt="Poster"
-              className="w-full h-auto rounded-lg shadow-md object-cover max-h-[400px]"
-            />
-          </div>
-          <h1 className="text-3xl font-bold text-center mb-2 text-purple-800">
-            🛍️ Madina Unique Fashion Marketplace
-          </h1>
+      {/* Main Content */}
+      <div
+        className="flex-1 m-0 p-0"
+        style={{ minHeight: "100vh", marginLeft: window.innerWidth < 640 ? 50 : 130 }}
+      >
+        {/* Poster */}
+        <div className="sticky top-0 z-30 bg-white m-0 p-0 shadow-md">
+          <img
+            src="https://res.cloudinary.com/dbdgekpfd/image/upload/v1755862414/IMG-20250819-WA0000_wuqptv.jpg"
+            alt="Poster"
+            className="w-full h-auto object-cover max-h-[370px] m-0 p-0"
+          />
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0 m-0 p-0 mt-1">
           {filteredProducts.length ? (
             filteredProducts.map((product, idx) => (
               <ProductCard
@@ -104,7 +101,7 @@ const App = () => {
               />
             ))
           ) : (
-            <p className="text-center col-span-full text-gray-600">
+            <p className="text-center col-span-full text-gray-600 m-0 p-0">
               এই ক্যাটাগরিতে কোনো পণ্য নেই।
             </p>
           )}
@@ -139,4 +136,3 @@ const App = () => {
 };
 
 export default App;
-
