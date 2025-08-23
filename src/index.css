@@ -6,3 +6,13 @@ body {
   background-color: #f3f4f6;
   font-family: sans-serif;
 }
+/* Scroll behavior */
+.scroll-desktop {
+  overflow: auto; /* Desktop scroll দেখাবে */
+}
+
+@media (max-width: 1024px) {
+  .scroll-desktop {
+    overflow: hidden; /* Mobile & Tablet scroll hidden */
+  }
+}

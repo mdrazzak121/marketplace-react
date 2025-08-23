@@ -42,37 +42,36 @@ const App = () => {
   ];
 
   return (
-    <div className="flex m-0 p-0">
+    <div className="flex m-0 p-0 scroll-desktop">
       {/* Sidebar */}
-<aside
-  className="bg-gray-800 text-white p-2 z-40 w-32 sm:fixed sm:top-0 sm:left-0 sm:h-full"
-  style={{
-    maxWidth: window.innerWidth < 640 ? 45 : 130,
-  }}
->
-  <h2 className="text-base font-bold mb-2">Categories</h2>
-  <div className="flex flex-col gap-1 justify-center items-center">
-    {categories.map((cat) => (
-      <button
-        key={cat.value}
-        className={`w-full text-left px-2 py-1 rounded text-xs hover:bg-gray-700 ${
-          selectedCategory === cat.value ? "bg-gray-700" : ""
-        }`}
-        onClick={() => setSelectedCategory(cat.value)}
+      <aside
+        className="bg-gray-800 text-white p-2 z-40 w-32 sm:fixed sm:top-0 sm:left-0 sm:h-full"
+        style={{
+          maxWidth: window.innerWidth < 640 ? 45 : 130,
+        }}
       >
-        {cat.label}
-      </button>
-    ))}
-    <button
-      className="w-full mt-2 px-2 py-1 rounded text-xs bg-purple-600 hover:bg-purple-700 text-white font-semibold"
-      onClick={handleOrderCart}
-      disabled={cart.length === 0}
-    >
-      All Cart Items ({cart.length})
-    </button>
-  </div>
-</aside>
-
+        <h2 className="text-base font-bold mb-2">Categories</h2>
+        <div className="flex flex-col gap-1 justify-center items-center">
+          {categories.map((cat) => (
+            <button
+              key={cat.value}
+              className={`w-full text-left px-2 py-1 rounded text-xs hover:bg-gray-700 ${
+                selectedCategory === cat.value ? "bg-gray-700" : ""
+              }`}
+              onClick={() => setSelectedCategory(cat.value)}
+            >
+              {cat.label}
+            </button>
+          ))}
+          <button
+            className="w-full mt-2 px-2 py-1 rounded text-xs bg-purple-600 hover:bg-purple-700 text-white font-semibold"
+            onClick={handleOrderCart}
+            disabled={cart.length === 0}
+          >
+            All Cart Items ({cart.length})
+          </button>
+        </div>
+      </aside>
 
       {/* Main Content */}
       <div
@@ -82,9 +81,9 @@ const App = () => {
         {/* Poster */}
         <div className="sticky top-0 z-30 bg-white m-0 p-0 shadow-md">
           <img
-            src="https://res.cloudinary.com/dbdgekpfd/image/upload/v1755862414/IMG-20250819-WA0000_wuqptv.jpg"
+            src="https://res.cloudinary.com/dbdgekpfd/image/upload/v1755915327/IMG-20250819-WA0000_fxlcm9.jpg"
             alt="Poster"
-            className="w-full h-auto object-cover max-h-[370px] m-0 p-0"
+            className="w-full h-auto object-cover max-h-[360px] m-0 p-0"
           />
         </div>
 
