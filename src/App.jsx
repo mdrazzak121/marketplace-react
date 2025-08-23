@@ -31,7 +31,7 @@ const App = () => {
     { label: "Male Dress", value: "male" },
     { label: "Female Dress", value: "female" },
     { label: "Baby Dress", value: "baby" },
-    { label: "Islamik Dress", value: "adult" },
+    { label: "Islamic Dress", value: "adult" },
     { label: "Emitession", value: "emitession" },
     { label: "Fancy Dress", value: "fancy" },
     { label: "Sharee", value: "sharee" },
@@ -44,35 +44,35 @@ const App = () => {
   return (
     <div className="flex m-0 p-0">
       {/* Sidebar */}
-      <aside
-        className="bg-gray-800 text-white min-h-screen z-40 fixed top-0 left-0 h-full overflow-y-auto p-0"
-        style={{ maxWidth: window.innerWidth < 640 ? 45 : 130 }}
-      >
-        <h2 className="text-sm sm:text-base font-bold text-center m-0 p-2">
-          Categories
-        </h2>
-        <div className="flex flex-col gap-0 m-0 p-0">
-          {categories.map((cat) => (
-            <button
-              key={cat.value}
-              className={`w-full text-left text-xs sm:text-sm hover:bg-gray-700 p-1 ${
-                selectedCategory === cat.value ? "bg-gray-700" : ""
-              }`}
-              onClick={() => setSelectedCategory(cat.value)}
-            >
-              {cat.label}
-            </button>
-          ))}
-         <button
-  className="w-full px-2 py-1 text-xs bg-purple-600 hover:bg-purple-700 text-white font-semibold"
-  onClick={handleOrderCart}
-  disabled={cart.length === 0}
+<aside
+  className="bg-gray-800 text-white p-2 z-40 w-32 sm:fixed sm:top-0 sm:left-0 sm:h-full"
+  style={{
+    maxWidth: window.innerWidth < 640 ? 45 : 130,
+  }}
 >
-  All Cart Items ({cart.length})
-</button>
+  <h2 className="text-base font-bold mb-2">Categories</h2>
+  <div className="flex flex-col gap-1 justify-center items-center">
+    {categories.map((cat) => (
+      <button
+        key={cat.value}
+        className={`w-full text-left px-2 py-1 rounded text-xs hover:bg-gray-700 ${
+          selectedCategory === cat.value ? "bg-gray-700" : ""
+        }`}
+        onClick={() => setSelectedCategory(cat.value)}
+      >
+        {cat.label}
+      </button>
+    ))}
+    <button
+      className="w-full mt-2 px-2 py-1 rounded text-xs bg-purple-600 hover:bg-purple-700 text-white font-semibold"
+      onClick={handleOrderCart}
+      disabled={cart.length === 0}
+    >
+      All Cart Items ({cart.length})
+    </button>
+  </div>
+</aside>
 
-        </div>
-      </aside>
 
       {/* Main Content */}
       <div

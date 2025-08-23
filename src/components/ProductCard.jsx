@@ -2,11 +2,16 @@ import React from "react";
 
 const ProductCard = ({ product, onImageClick, onAddToCart, isInCart }) => {
   return (
-    <div className="border rounded-xl p-3 shadow-md bg-green text-center">
+<div
+  className="border rounded-xl p-3 shadow-md bg-green text-center 
+             transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+>
+
       <img
         src={product.image}
         alt={product.name}
-        className="w-full h-32 object-cover rounded-lg mb-1.5 cursor-pointer" // image height আগের মতো
+        className="w-full h-32 object-cover rounded-lg mb-1.5 cursor-pointer 
+        transform transition duration-300 group-hover:scale-110"
         onClick={() => onImageClick(product.image)}
       />
       <h2 className="text-base font-semibold">{product.name}</h2>
@@ -19,17 +24,18 @@ const ProductCard = ({ product, onImageClick, onAddToCart, isInCart }) => {
       <p className="text-xs mt-1">{product.description}</p>
       <div className="flex justify-center gap-2 mt-2">
         <a
-          href={`https://wa.me/8801738730573?text=${encodeURIComponent(
+          href={`https://wa.me/8801730573?text=${encodeURIComponent(
             `আমি এই প্রোডাক্টটি অর্ডার করতে চাই: ${product.name} (Code: ${product.id})`
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-3 py-1.5 bg-green-500 text-white rounded-lg hover:bg-green-600 text-xs"
+          className="px-3 py-1.5 bg-green-500 text-white rounded-lg 
+          hover:bg-green-600 text-xs transition duration-300"
         >
           Order Now
         </a>
         <button
-          className={`px-3 py-1.5 rounded-lg text-xs ${
+          className={`px-3 py-1.5 rounded-lg text-xs transition duration-300 ${
             isInCart
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-purple-600 hover:bg-purple-700 text-white"
