@@ -8,6 +8,7 @@ const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [cart, setCart] = useState([]);
   const [showCartModal, setShowCartModal] = useState(false);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   const filteredProducts =
     selectedCategory === "all"
@@ -42,13 +43,26 @@ const App = () => {
   ];
 
   return (
-    <div className="flex m-0 p-0 scroll-desktop">
+    <div className="flex m-0 p-0">
+      {/* Hamburger button for mobile */}
+      <button
+        className="sm:hidden fixed top-2 left-2 z-50 p-2 bg-gray-800 text-white rounded"
+        onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
+      >
+        ☰
+      </button>
+
       {/* Sidebar */}
       <aside
-        className="bg-gray-800 text-white p-2 z-40 w-32 sm:fixed sm:top-0 sm:left-0 sm:h-full"
-        style={{
-          maxWidth: window.innerWidth < 640 ? 45 : 130,
-        }}
+        className={`
+          bg-gray-800 text-white p-2 z-40
+          fixed top-0 left-0 h-full
+          w-[50px] sm:w-[130px]
+          overflow-y-auto
+          transition-transform duration-300
+          ${mobileSidebarOpen ? "translate-x-0" : "-translate-x-full"} 
+          sm:translate-x-0
+        `}
       >
         <h2 className="text-base font-bold mb-2">Categories</h2>
         <div className="flex flex-col gap-1 justify-center items-center">
@@ -74,10 +88,7 @@ const App = () => {
       </aside>
 
       {/* Main Content */}
-      <div
-        className="flex-1 m-0 p-0"
-        style={{ minHeight: "100vh", marginLeft: window.innerWidth < 640 ? 50 : 130 }}
-      >
+      <div className="flex-1 min-h-screen ml-[50px] sm:ml-[130px]">
         {/* Poster */}
         <div className="sticky top-0 z-30 bg-white m-0 p-0 shadow-md">
           <img
@@ -88,7 +99,7 @@ const App = () => {
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0 m-0 p-0 mt-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0 mt-1">
           {filteredProducts.length ? (
             filteredProducts.map((product, idx) => (
               <ProductCard
